@@ -85,18 +85,14 @@ styles.replaceSync(
 
 .screencast-viewport {
   display: flex;
-  border: 1px solid var(--sys-color-divider);
   border-radius: 20px;
   flex: none;
-  padding: 20px;
   margin: auto;
-  background-color: var(--sys-color-surface-variant);
 }
 
 .screencast-canvas-container {
   flex: auto;
   display: flex;
-  border: 1px solid var(--sys-color-divider);
   position: relative;
 }
 

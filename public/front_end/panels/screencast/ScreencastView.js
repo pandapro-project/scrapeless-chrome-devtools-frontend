@@ -143,6 +143,8 @@ export class ScreencastView extends UI.Widget.VBox {
         this.element.classList.add('screencast');
         this.createNavigationBar();
         this.viewportElement = this.element.createChild('div', 'screencast-viewport hidden');
+        // this.viewportElement.style.width = '80%';
+        // this.viewportElement.style.height = '80%';
         this.canvasContainerElement = this.viewportElement.createChild('div', 'screencast-canvas-container');
         this.glassPaneElement =
             this.canvasContainerElement.createChild('div', 'screencast-glasspane fill hidden');
@@ -236,8 +238,8 @@ export class ScreencastView extends UI.Widget.VBox {
                 this.imageZoom = 1 / window.devicePixelRatio;
             }
             this.screenZoom = this.imageElement.naturalWidth * this.imageZoom / metadata.deviceWidth;
-            this.viewportElement.style.width = metadata.deviceWidth * this.screenZoom + bordersSize + 'px';
-            this.viewportElement.style.height = metadata.deviceHeight * this.screenZoom + bordersSize + 'px';
+            // this.viewportElement.style.width = metadata.deviceWidth * this.screenZoom + bordersSize + 'px';
+            // this.viewportElement.style.height = metadata.deviceHeight * this.screenZoom + bordersSize + 'px';
             const data = this.highlightNode ? { node: this.highlightNode, selectorList: undefined } : { clear: true };
             void this.updateHighlightInOverlayAndRepaint(data, this.highlightConfig);
         };

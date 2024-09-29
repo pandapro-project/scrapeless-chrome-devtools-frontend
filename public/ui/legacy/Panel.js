@@ -65,7 +65,7 @@ export class PanelWithSidebar extends Panel {
     constructor(name, defaultWidth) {
         super(name);
         this.panelSplitWidget =
-            new SplitWidget(true, false, this.panelName + '-panel-split-view-state', defaultWidth || 200);
+            new SplitWidget(false, false, this.panelName + '-panel-split-view-state', defaultWidth || 200);
         this.panelSplitWidget.show(this.element);
         this.mainWidget = new VBox();
         this.panelSplitWidget.setMainWidget(this.mainWidget);

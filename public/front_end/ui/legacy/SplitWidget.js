@@ -77,6 +77,7 @@ export class SplitWidget extends Common.ObjectWrapper.eventMixin(Widget) {
         this.element.classList.add('split-widget');
         this.registerRequiredCSS(splitWidgetStyles);
         this.contentElement.classList.add('shadow-split-widget');
+        this.contentElement.style = "flex-direction: column !important";
         this.sidebarElementInternal =
             this.contentElement.createChild('div', 'shadow-split-widget-contents shadow-split-widget-sidebar vbox');
         this.mainElement =
