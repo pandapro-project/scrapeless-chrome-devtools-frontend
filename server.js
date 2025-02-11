@@ -2,6 +2,8 @@ const http = require('http');
 const fs = require('fs/promises');
 
 // 写一个http服务器，监听8080端口，当访问http://localhost:8080/时，返回一个html页面
+
+// http://localhost:8080/inspector?ws=127.0.0.1:8001/devtools/profile/{profileId}/page/{pageId}
 const server = http.createServer(async (req, res) => {
   const filePath = `./public${req.url.split('?')[0]}`;
   const suffix = req.url.split('?')[0].split('.').pop();
