@@ -121,6 +121,7 @@ styles.replaceSync(
 .screencast-dimension {
   /* Keep this in sync with tool_highlight.css (.dimensions) */
   color: var(--sys-color-outline);
+  display: none;
 }
 
 .screencast-glasspane {

@@ -558,7 +558,7 @@ export class ScreencastView extends UI.Widget.VBox {
         this.titleElement.style.left = (boxX + 3) + 'px';
     }
     viewportDimensions() {
-        const gutterSize = 30;
+        const gutterSize = 0;
         const bordersSize = BORDERS_SIZE;
         const width = this.element.offsetWidth - bordersSize - gutterSize;
         const height = this.element.offsetHeight - bordersSize - gutterSize - NAVBAR_HEIGHT;
@@ -585,6 +585,10 @@ export class ScreencastView extends UI.Widget.VBox {
     }
     createNavigationBar() {
         this.navigationBar = this.element.createChild('div', 'screencast-navigation');
+        const type = new URLSearchParams(window.location.search).get('type');
+        if (type === 'preview') {
+          this.navigationBar.style.display = 'none';
+        }
         this.navigationBack = this.navigationBar.createChild('button', 'navigation');
         {
             const icon = this.navigationBack.appendChild(new IconButton.Icon.Icon());
@@ -714,7 +718,7 @@ export class ScreencastView extends UI.Widget.VBox {
         return true;
     }
 }
-export const BORDERS_SIZE = 44;
+export const BORDERS_SIZE = 0;
 export const NAVBAR_HEIGHT = 29;
 export const HTTP_REGEX = /^http:\/\/(.+)/;
 export const SCHEME_REGEX = /^(https?|about|chrome):/;

@@ -83,6 +83,9 @@ export class SplitWidget extends Common.ObjectWrapper.eventMixin(Widget) {
         if (type === 'operator') {
           this.sidebarElementInternal.style.display = 'none';
         }
+        if (type === 'preview') {
+          this.sidebarElementInternal.style.display = 'none';
+        }
         this.mainElement =
             this.contentElement.createChild('div', 'shadow-split-widget-contents shadow-split-widget-main vbox');
         this.mainElement.createChild('slot').name = 'insertion-point-main';
