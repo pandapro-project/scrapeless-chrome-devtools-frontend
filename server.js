@@ -47,6 +47,6 @@ const server = http.createServer(async (req, res) => {
   res.end(data);
 });
 
-server.listen(8080, () => {
+server.listen(8088, () => {
   console.log('Server is listening on port 8080');
 });

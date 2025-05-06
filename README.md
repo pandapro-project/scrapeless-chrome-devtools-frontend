@@ -1,3 +1,29 @@
+# Chrome DevTools frontend
+
+> 代码只需要修改 `/public` 外层即可，~~`/front_end`~~ 中的无视
+
+### 调试
+``` sh
+node server.js
+```
+
+### 通过 url query 定制视图样式
+
+- 默认
+主题色调跟随browserless主机系统变化，默认存在导航栏，和调试控制台
+
+- `type=operator`
+移除调试控制台
+
+- `type=preview`
+移除调试控制台、导航栏、纯视图显示
+
+- `theme=light` 
+
+- `theme=dark` 
+
+
+---
 # Automated Chrome DevTools frontend builder
 
 This repository contains a [Github Action](.github/workflows/build.yml) that runs once a week on a schedule, builds the [Chrome DevTools frontend](https://chromium.googlesource.com/devtools/devtools-frontend) source code, and sends the build code to the [main](https://github.com/iam-medvedev/chrome-devtools/tree/main) branch via [PR](https://github.com/iam-medvedev/chrome-devtools/pulls?q=is%3Apr+label%3Aauto-build).
