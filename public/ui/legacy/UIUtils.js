@@ -958,6 +958,7 @@ export function createInput(className, type, jslogContext) {
     }
     element.spellcheck = false;
     element.classList.add('harmony-input');
+    element.style.marginRight = '6px';
     if (type) {
         element.type = type;
     }
