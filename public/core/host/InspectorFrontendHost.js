@@ -118,7 +118,7 @@ export class InspectorFrontendHostStub {
     setInjectedScriptForOrigin(origin, script) {
     }
     inspectedURLChanged(url) {
-        document.title = i18nString(UIStrings.devtoolsS, { PH1: url.replace(/^https?:\/\//, '') });
+        document.title = `Live Session Preview - Scrapeless - ${url.replace(/^https?:\/\//, '')}`
     }
     copyText(text) {
         if (text === undefined || text === null) {
