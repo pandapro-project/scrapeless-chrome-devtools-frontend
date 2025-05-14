@@ -614,12 +614,14 @@ export class ScreencastView extends UI.Widget.VBox {
         UI.ARIAUtils.setLabel(this.navigationUrl, i18nString(UIStrings.addressBar));
         this.mouseInputToggle = this.navigationBar.createChild('button');
         this.mouseInputToggle.disabled = true;
+        this.mouseInputToggle.style.display = 'none';
         {
             this.mouseInputToggleIcon = this.mouseInputToggle.appendChild(new IconButton.Icon.Icon());
             this.mouseInputToggleIcon.data = { color: 'var(--icon-toggled)', iconName: 'mouse' };
         }
         UI.ARIAUtils.setLabel(this.mouseInputToggle, i18nString(UIStrings.mouseInput));
         this.touchInputToggle = this.navigationBar.createChild('button');
+        this.touchInputToggle.style.display = 'none';
         {
             this.touchInputToggleIcon = this.touchInputToggle.appendChild(new IconButton.Icon.Icon());
             this.touchInputToggleIcon.data = { color: 'var(--icon-default)', iconName: 'touch-app' };
