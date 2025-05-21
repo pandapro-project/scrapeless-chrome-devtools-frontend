@@ -12,11 +12,15 @@ node server.js
 - 默认
 主题色调跟随browserless主机系统变化，默认存在导航栏，和调试控制台
 
+- `type=preview` (默认)
+移除调试控制台、导航栏、纯视图显示
+
 - `type=operator`
 移除调试控制台
 
-- `type=preview`
-移除调试控制台、导航栏、纯视图显示
+- `type=original`
+原始完整 devtools 显示
+
 
 - `theme=light` 
 
