@@ -79,7 +79,7 @@ export class SplitWidget extends Common.ObjectWrapper.eventMixin(Widget) {
         this.sidebarElementInternal =
             this.contentElement.createChild('div', 'shadow-split-widget-contents shadow-split-widget-sidebar vbox');
         // this.sidebarElementInternal.style.flex = '1';
-        const type = new URLSearchParams(window.location.search).get('type');
+        const type = new URLSearchParams(window.location.search).get('type') || 'preview'
         if (type === 'operator') {
           this.sidebarElementInternal.style.display = 'none';
         }

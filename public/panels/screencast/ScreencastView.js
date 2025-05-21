@@ -585,7 +585,7 @@ export class ScreencastView extends UI.Widget.VBox {
     }
     createNavigationBar() {
         this.navigationBar = this.element.createChild('div', 'screencast-navigation');
-        const type = new URLSearchParams(window.location.search).get('type');
+        const type = new URLSearchParams(window.location.search).get('type') || 'preview'
         if (type === 'preview') {
           this.navigationBar.style.display = 'none';
         }
